@@ -47,18 +47,19 @@ switch(comando){
     for(let d of funcionarios){
         if(d.getNome() == nome){
             d.addDiaria();
-            break;
         }
-    }
+    } 
+    break;
+   
    
 
     case "mostrarSalario":
     let nomes= readline.question("Digite o seu nome: ");
     let salario: number;
-    for(let x of funcionarios){
+    for(let x of funcionarios){ // o x vai percorer todo o funcionarios e procurar os valores  (of)
         if(x.getNome() == nomes){
             salario = x.calcularSalario();
-            console.log(salario);
+            console.log("Salario:" + salario);
             break;
         }
     }
@@ -67,7 +68,11 @@ switch(comando){
 
     case "excluir": //excluir Funcinario
 
+
     break;
+
+    
+    case "addBonus": //não entendi como fazer o cofigo Bonus
 
     case "status":
 	let mostra: string = readline.question("Digite o nome do funcionario: "); //procurar o 
@@ -79,7 +84,7 @@ switch(comando){
 	}if (f == undefined){
 		console.log("Não existe");
     }else {
-        console.log (f);
+        console.log ("Nome: " + f.getNome() + "\n" + "Diaria: " + f.getDiaria() + "\n"+ "Salario: " + f.calcularSalario());
         
     }
     
