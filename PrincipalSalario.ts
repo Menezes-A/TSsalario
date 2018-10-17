@@ -67,12 +67,17 @@ switch(comando){
     break;
 
     case "excluir": //excluir Funcinario
-
-
+    let nomeExcluir= readline.question("Digite o nome de quem vai ser excluido:");
+    for(let i:number = 0; i < funcionarios.length; i++){ // criar uma variavel i, ela vai iniciar 0 e vai ter que ser menor que o tamnho do array (.length) e incrementar +1
+        if(funcionarios[i].getNome() == nomeExcluir) {
+            funcionarios.splice(i, 1);
+            break;
+        }
+    }
     break;
-
     
     case "addBonus": //não entendi como fazer o cofigo Bonus
+    break;
 
     case "status":
 	let mostra: string = readline.question("Digite o nome do funcionario: "); //procurar o 
